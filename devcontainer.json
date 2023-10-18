@@ -1,0 +1,25 @@
+{
+    "version": "1.0.0",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "features": {
+      "docker-in-docker:latest": {
+        "version": "latest"
+      },
+      "appium": {
+        "version": "latest"
+      },
+      "wireshark": {
+        "version": "latest"
+      }
+    },
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash",
+      "terminal.integrated.shellArgs.linux": ["-l"],
+      "terminal.integrated.shell.osx": "/bin/bash",
+      "terminal.integrated.shellArgs.osx": ["-l"],
+      "terminal.integrated.shell.windows": "powershell.exe",
+      "terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "Bypass"]
+    }
+  }
