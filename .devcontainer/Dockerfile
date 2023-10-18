@@ -2,7 +2,9 @@
 FROM mcr.microsoft.com/devcontainers/universal:2 AS base
 
 # Install Appium
-RUN apt-get update && apt-get install -y appium wireshark
+FROM appium/appium:latest
+
+COPY . /app
 
 # Stage 2: Create a final image that extends the base image
 FROM base AS final
@@ -12,9 +14,6 @@ WORKDIR /app
 
 # Copy the package.json file
 COPY package.json .
-
-# Install the dependencies
-RUN npm install
 
 # EXPOSE port 4723 for Appium
 EXPOSE 4723
