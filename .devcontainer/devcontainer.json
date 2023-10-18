@@ -1,0 +1,10 @@
+{
+    "name": "Appium and Wireshark Development Environment",
+    "dockerFile": "Dockerfile",
+    "extensions": ["dbaeumer.vscode-eslint"],
+    "settings": {
+      "files.autoSave": "off"
+    },
+    "runArgs": ["--cap-add=NET_ADMIN", "--cap-add=SYS_PTRACE"],
+    "remoteUser": "codespace"
+  }
